@@ -5,7 +5,7 @@ export default function TextForm(props) {
     const len=(array)=>{
         let count=0
         for(let i=0;i<array.length;i++){
-            if(array[i]!=""){
+            if(array[i]!==""){
                 count++
             }
         }
@@ -75,10 +75,10 @@ export default function TextForm(props) {
         <div className="form-floating my-2">
             <h1>{props.heading}</h1>
             <textarea className="form-control" onChange={handleChange} value={text} id="floatingTextarea2" style={myStyle}></textarea>
-            <button className="btn btn-primary mx-2" onClick={eventUpHandle}>Convert to UpperCase</button>
+            <button className="btn btn-primary mx-2" disabled={text.length===0} onClick={eventUpHandle}>Convert to UpperCase</button>
             {/* <button className="btn btn-primary mx-2" onClick={eventCapHandle}>Capitalized Case</button> */}
-            <button className="btn btn-primary mx-2" onClick={eventLoHandle}>Convert to LowerCase</button>
-            <button className="btn btn-primary" onClick={changeStyle}>{btnText}</button>
+            <button className="btn btn-primary mx-2" disabled={text.length===0} onClick={eventLoHandle}>Convert to LowerCase</button>
+            <button className="btn btn-primary" disabled={text.length===0} onClick={changeStyle}>{btnText}</button>
         </div>
         <div className="container">
             <h1>YOUR TEXT SUMMARY</h1>
