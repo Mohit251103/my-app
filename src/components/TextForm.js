@@ -78,7 +78,7 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-2" disabled={text.length===0} onClick={eventUpHandle}>Convert to UpperCase</button>
             {/* <button className="btn btn-primary mx-2" onClick={eventCapHandle}>Capitalized Case</button> */}
             <button className="btn btn-primary mx-2" disabled={text.length===0} onClick={eventLoHandle}>Convert to LowerCase</button>
-            <button className="btn btn-primary" disabled={text.length===0} onClick={changeStyle}>{btnText}</button>
+            <button className="btn btn-primary" onClick={changeStyle}>{btnText}</button>
         </div>
         <div className="container">
             <h1>YOUR TEXT SUMMARY</h1>
