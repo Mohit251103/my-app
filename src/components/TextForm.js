@@ -82,7 +82,7 @@ export default function TextForm(props) {
         </div>
         <div className="container">
             <h1>YOUR TEXT SUMMARY</h1>
-            <p>{len(text.split(" "))} words and {text.length} characters</p>
+            <p>{len(text.split(/\s+/))} words and {text.length} characters</p>
         </div>
         </>
     )
